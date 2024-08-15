@@ -2,6 +2,8 @@
 
 The LittleFSShell command interface provides a set of commands for interacting with the LittleFS (SPI Flash File System) on an ESP8266 or ESP32 microcontroller. The LittleFSShell class encapsulates the functionality and provides a command-line interface over the Serial port.
 
+This is an adaptation of the original work of **masaad01** which is available here: https://github.com/masaad01/SPIFFS_Shell for SPIFFS. All credit goes to him.
+
 ## Getting Started
 
 To use the LittleFSShell command interface, just include the header file <LittleFS_Shell.h>. The Library automatically includes the necessary files, initializes the LittleFS and starts the command interface.
