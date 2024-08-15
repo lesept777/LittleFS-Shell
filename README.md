@@ -53,6 +53,13 @@ This is the content of file1.txt.
 
 Read the contents of a file and print them to the Serial port as hexadecimal.
 
+Example usage:
+
+```
+LittleFS# dump file2.txt
+ 0x22 0x48 0x65 0x6C 0x6C 0x6F 0x2C 0x57 0x6F 0x72 0x6C 0x64 0x21 0x22          	"Hello,World!"
+```
+
 ### echo \<message\> \<file\>
 
 Write a message to a file. If the file does not exist, it will be created. If the file already exists, the message will overwrite the existing content.
