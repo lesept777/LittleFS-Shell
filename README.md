@@ -46,6 +46,11 @@ LittleFS# cat file1.txt
 This is the content of file1.txt.
 ```
 
+
+### dump \<file\>
+
+Read the contents of a file and print them to the Serial port as hexadecimal.
+
 ### echo \<message\> \<file\>
 
 Write a message to a file. If the file does not exist, it will be created. If the file already exists, the message will overwrite the existing content.
@@ -133,6 +138,7 @@ LittleFS# help
 Available commands:
 ls <directory> - List the contents of a directory
 cat <file> - Read the contents of a file
+dump <file> - Dumps the contents of a file as hexadecimal
 echo <message> <file> - Write a message to a file
 append <message> <file> -
 
