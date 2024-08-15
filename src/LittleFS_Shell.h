@@ -77,13 +77,14 @@ private:
   void static parseCommand(const String& command, String& cmd, String& arg1, String& arg2) {
     Serial.println(command);
     int spaceIndex1 = command.indexOf(' '); // Find the index of the first space character
-    int spaceIndex2 = command.indexOf(' ', spaceIndex1 + 1); // Find the index of the second space character
+    int spaceIndex2 = command.lastIndexOf(' '); // Find the index of the last space character
+//    int spaceIndex2 = command.indexOf(' ', spaceIndex1 + 1); // Find the index of the second space character
 
     if (spaceIndex1 == -1) {
       cmd = command;
     } else {
       cmd = command.substring(0, spaceIndex1); // Extract the command from the command string
-      if (spaceIndex2 == -1) {
+      if (spaceIndex2 == -1 or spaceIndex1 == spaceIndex2) {
         arg1 = command.substring(spaceIndex1 + 1); // Extract the first argument from the command string
       } else {
         arg1 = command.substring(spaceIndex1 + 1, spaceIndex2); // Extract the first argument from the command string
